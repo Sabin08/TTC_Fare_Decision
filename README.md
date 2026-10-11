@@ -89,15 +89,6 @@ PostgreSQL. Tested on version 16.
 
 The seed data includes hand-made test cards. Expected decisions, in time order:
 
-## Limitations
-
-- **The data is synthetic.** Locations are random, so a card can appear at two distant stations minutes apart. Do not use it for route analysis.
-- **No monthly fare cap.** Since 1 September 2026 the TTC stops charging after 47 paid trips in a calendar month. This project does not model that.
-- **No card validity.** Every tap is treated as coming from a valid card.
-- **TTC only.** Transfers involving GO Transit or other agencies follow different rules.
-- **Not how a live system works.** A real fare system decides at the moment of the tap and stores the result. This project deliberately removes the stored result so the logic has to be rebuilt in SQL.
-- **Batch, not real time.** The queries replay the whole table. Speed was not a goal.
-
 ## Sources
 
 - [TTC: Two-hour transfer](https://ttc.ca/Fares-and-passes/PRESTO-on-the-TTC/Two-hour-transfer)
